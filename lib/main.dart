@@ -24,7 +24,7 @@ class EdurekaShopAppState extends State<EdurekaShopApp> {
       appBar: AppBar(
         title: const Text("Edureka Shop"),
       ),
-      body: Column(children: [
+      body: Column( children: [
         Row(
           children: const [
             Counter()

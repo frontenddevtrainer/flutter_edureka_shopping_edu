@@ -12,17 +12,20 @@ class _CounterState extends State<Counter> {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      children:  [
-        Text("Counter: $counter"),
-        ElevatedButton(
-            onPressed: () {
-              setState(() {
-                counter = counter + 1;
-              });
-            },
-            child: const Text("Counter +1"))
-      ],
+    return Container(
+      padding: const EdgeInsets.all(10),
+      child: Row(
+        children: [
+          Text("Counter: $counter", style: const TextStyle(fontSize: 32),),
+          ElevatedButton(
+              onPressed: () {
+                setState(() {
+                  counter = counter + 1;
+                });
+              },
+              child: const Text("Counter +1"))
+        ],
+      ),
     );
   }
 }
