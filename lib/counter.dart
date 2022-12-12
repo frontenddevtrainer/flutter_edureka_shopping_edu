@@ -12,11 +12,12 @@ class _CounterState extends State<Counter> {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      padding: const EdgeInsets.all(10),
+    return Padding(
+      padding: const EdgeInsets.all(40),
       child: Row(
         children: [
           Text("Counter: $counter", style: const TextStyle(fontSize: 32),),
+          counter % 2 == 0 ? const Text("Even") : const Text("Odd"),
           ElevatedButton(
               onPressed: () {
                 setState(() {
@@ -25,7 +26,6 @@ class _CounterState extends State<Counter> {
               },
               child: const Text("Counter +1"))
         ],
-      ),
-    );
+      ));
   }
 }
