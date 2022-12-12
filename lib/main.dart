@@ -14,7 +14,11 @@ class EdurekaShopApp extends StatelessWidget {
       appBar: AppBar(
         title: const Text("Edureka Shop"),
       ),
-      body: const Text("Hello world!!!"),
+      body: Column(children: const [
+        Text("Hello world!!!"),
+        Text("This is the Edureka Shop."),
+        ElevatedButton(onPressed: null,child: Text("Login"),)
+      ]),
     ));
   }
 }
