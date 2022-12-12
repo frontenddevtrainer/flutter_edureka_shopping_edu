@@ -15,6 +15,8 @@ class EdurekaShopApp extends StatefulWidget {
 }
 
 class EdurekaShopAppState extends State<EdurekaShopApp> {
+  var counter = 0;
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -24,10 +26,16 @@ class EdurekaShopAppState extends State<EdurekaShopApp> {
       ),
       body: Column(children: [
         Row(
-          children: const [
-            Text("hello"),
-            Text("World"),
-            ElevatedButton(onPressed: null, child: Text("Login"))
+          children: [
+            const Text("hello"),
+            Text(counter.toString()),
+            ElevatedButton(
+                onPressed: () {
+                  setState(() {
+                    counter = counter + 1;
+                  });
+                },
+                child: const Text("Counter 1+"))
           ],
         ),
         Row(
