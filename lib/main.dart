@@ -32,7 +32,7 @@ class EdurekaShopAppState extends State<EdurekaShopApp> {
       ),
       body: Column(
         children: [
-          ...products.map((product) => const Catalog())
+          ...products.map((product) => Catalog( product: product, ))
         ],
       ),
     ));

@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 
 class Catalog extends StatelessWidget {
-  const Catalog({super.key});
+
+  final String product;
+
+  const Catalog({super.key, this.product = ""});
 
   @override
   Widget build(BuildContext context) {
@@ -13,7 +16,7 @@ class Catalog extends StatelessWidget {
           children: [
             Container( color: Colors.redAccent, height: 60, width: 60, ),
             const SizedBox(width:10,),
-            const Text("Hello World"),
+            Text(product),
           ],
         ),
       ),
