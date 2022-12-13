@@ -15,7 +15,8 @@ class Catalog extends StatelessWidget {
         maxHeight: 60,
         child: Row(
           children: [
-            CircleAvatar(backgroundImage: NetworkImage(image),),
+            // CircleAvatar(backgroundImage: NetworkImage(image),),
+            Image(image: NetworkImage(image), height: 60, width: 60, fit: BoxFit.fill,),
             const SizedBox(width:10,),
             Text(product),
           ],
