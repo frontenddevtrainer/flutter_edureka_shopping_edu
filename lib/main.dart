@@ -18,12 +18,23 @@ class EdurekaShopApp extends StatefulWidget {
 class EdurekaShopAppState extends State<EdurekaShopApp> {
   @override
   Widget build(BuildContext context) {
+
+    var products = [
+        "Hello world!!!",
+        "Edureka Shop",
+        "Top Product"
+    ];
+
     return MaterialApp(
         home: Scaffold(
       appBar: AppBar(
         title: const Text("Edureka Shop"),
       ),
-      body: const Catalog(),
+      body: Column(
+        children: [
+          ...products.map((product) => const Catalog())
+        ],
+      ),
     ));
   }
 }
