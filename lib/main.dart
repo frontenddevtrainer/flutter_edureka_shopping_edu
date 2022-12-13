@@ -18,11 +18,17 @@ class EdurekaShopApp extends StatefulWidget {
 class EdurekaShopAppState extends State<EdurekaShopApp> {
   @override
   Widget build(BuildContext context) {
-
     var products = [
-        "Hello world!!!",
-        "Edureka Shop",
-        "Top Product"
+      {
+        "name": "Laptop",
+        "image":
+            "https://i.picsum.photos/id/237/200/300.jpg?hmac=TmmQSbShHz9CdQm0NkEjx1Dyh_Y984R9LpNrpvH2D_U"
+      },
+      {
+        "name": "Iphone",
+        "image":
+            "https://i.picsum.photos/id/866/200/300.jpg?hmac=rcadCENKh4rD6MAp6V_ma-AyWv641M4iiOpe1RyFHeI"
+      }
     ];
 
     return MaterialApp(
@@ -32,7 +38,10 @@ class EdurekaShopAppState extends State<EdurekaShopApp> {
       ),
       body: Column(
         children: [
-          ...products.map((product) => Catalog( product: product, ))
+          ...products.map((product) => Catalog(
+                product: product["name"] as String,
+                image: product["image"] as String
+              ))
         ],
       ),
     ));

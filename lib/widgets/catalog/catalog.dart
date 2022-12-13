@@ -3,8 +3,9 @@ import 'package:flutter/material.dart';
 class Catalog extends StatelessWidget {
 
   final String product;
+  final String image;
 
-  const Catalog({super.key, this.product = ""});
+  const Catalog({super.key, this.product = "", this.image = ""});
 
   @override
   Widget build(BuildContext context) {
@@ -14,7 +15,7 @@ class Catalog extends StatelessWidget {
         maxHeight: 60,
         child: Row(
           children: [
-            Container( color: Colors.redAccent, height: 60, width: 60, ),
+            CircleAvatar(backgroundImage: NetworkImage(image),),
             const SizedBox(width:10,),
             Text(product),
           ],
