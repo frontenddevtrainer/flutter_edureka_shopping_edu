@@ -13,7 +13,7 @@ class _CounterState extends State<Counter> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(40),
+      padding: const EdgeInsets.all(2),
       child: Row(
         children: [
           Text("Counter: $counter", style: const TextStyle(fontSize: 32),),

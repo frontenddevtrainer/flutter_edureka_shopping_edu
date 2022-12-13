@@ -38,10 +38,32 @@ class EdurekaShopAppState extends State<EdurekaShopApp> {
       ),
       body: Column(
         children: [
-          ...products.map((product) => Catalog(
-                product: product["name"] as String,
-                image: product["image"] as String
-              ))
+          // ...products.map((product) => Catalog(
+          //     product: product["name"] as String,
+          //     image: product["image"] as String))
+
+          ListView.separated(
+              padding: const EdgeInsets.all(2),
+              separatorBuilder: (context, index) => const Divider(
+                    color: Colors.amber,
+                  ),
+              shrinkWrap: true,
+              itemCount: products.length,
+              itemBuilder: ((context, index) {
+                return Catalog(
+                    image: products[index]['image'] as String,
+                    product: products[index]['name'] as String);
+              })),
+
+          ListView.builder(
+              padding: const EdgeInsets.all(2),
+              shrinkWrap: true,
+              itemCount: products.length,
+              itemBuilder: ((context, index) {
+                return Catalog(
+                    image: products[index]['image'] as String,
+                    product: products[index]['name'] as String);
+              }))
         ],
       ),
     ));
